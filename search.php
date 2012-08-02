@@ -2,7 +2,7 @@
 
 
               
-              <div class="pagetitle">Search Result for <?php /* Search Count */ $allsearch = &new WP_Query("s=$s&showposts=-1"); $key = wp_specialchars($s, 1); $count = $allsearch->post_count; _e(''); _e('&#8220;'); echo $key; _e('&#8221;'); _e(' &mdash; '); echo $count . ' '; _e('articles'); wp_reset_query(); ?></div>
+              <div class="pagetitle">Wyniki wyszukiwania dla frazy <?php /* Search Count */ $allsearch = &new WP_Query("s=$s&showposts=-1"); $key = wp_specialchars($s, 1); $count = $allsearch->post_count; _e(''); _e('&#8220;'); echo $key; _e('&#8221;'); _e(' &mdash; '); echo $count . ' '; wp_reset_query(); ?></div>
               
               <ul class="mcol">
               <?php if(have_posts()) : ?><?php while(have_posts()) : the_post(); ?>
@@ -39,7 +39,7 @@
             <?php if(have_posts()) : ?><?php while(have_posts()) : the_post(); ?>
             <?php endwhile; ?>
             <?php else : ?>
-                <h1 id="error"><?php _e("Sorry, but you are looking for something that isn&#8217;t here."); ?></h1>
+                <h1 id="error"><?php _e("Zima. Niczego nie znaleziono :("); ?></h1>
             <?php endif; ?>
         
 
